@@ -1,0 +1,12 @@
+@import "src/style-utils/functions";
+
+:host {
+  .box {
+    &[data-padding='default'] {
+      padding: var(--spacing);
+      @include respond-to('xsmall') {
+        padding: var(--spacing-small);
+      }
+    }
+  }
+}

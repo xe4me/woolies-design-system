@@ -1,0 +1,33 @@
+@import "src/style-utils/functions";
+
+:host {
+  .card-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 1;
+    flex-wrap: wrap;
+    @include respond-to('xsmall') {
+      flex-direction: column;
+    }
+
+    &__card {
+      max-width: pxToRem(300);
+
+      &:not(:first-child) {
+        margin-left: var(--spacing);
+      }
+
+      &:last-child {
+        margin-right: var(--spacing);
+      }
+
+      @include respond-to('xsmall') {
+        max-width: unset;
+        width: 100%;
+        margin-left: 0 !important;
+        margin-top: var(--spacing);
+      }
+    }
+  }
+}

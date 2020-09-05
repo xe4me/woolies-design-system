@@ -1,0 +1,17 @@
+@import "src/style-utils/functions";
+.main {
+  padding: 0 calc(var(--spacing) * 2);
+  @include respond-to('xsmall'){
+    padding: 0 calc(var(--spacing));
+  }
+  &__list {
+    display: block;
+    margin-top: var(--spacing);
+  }
+
+  &__title {
+    display: block;
+    margin-top: calc(var(--spacing) * 2);
+  }
+}
+
