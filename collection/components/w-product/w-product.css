@@ -1,0 +1,67 @@
+/*
+* Mixin to convert px to rem
+* @param {Number}
+*/
+/**
+* Mixin to manage responsive breakpoints
+* @param {String} $breakpoint - Breakpoint name
+* @require $breakpoints
+*/
+:host {
+  flex: 1;
+}
+:host .product {
+  box-shadow: var(--shaddow-large);
+  border-radius: var(--radius-large);
+  background-color: var(--color-negative);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+:host .product__actions {
+  margin-top: var(--spacing);
+  width: 100%;
+}
+:host .product__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*
+  @TODO : Even though the code below works and it doesn't have much problems, it isn't ideal.
+  @TODO : Ideally a Grid needs to be created as a separate component that handles these sort of responsive behaviours
+  @TODO : However, implementing the Grid is outside of the scope of this code challenge's expected time
+  */
+}
+:host .product__content > * {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  :host .product__content {
+    flex-direction: column;
+  }
+  :host .product__content > * {
+    width: 100%;
+  }
+  :host .product__content > *:nth-child(2) {
+    margin-top: var(--spacing);
+  }
+}
+:host .product__description {
+  margin-top: var(--spacing);
+}
+:host .product__details {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+  align-items: flex-start;
+}
+:host .product__image {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}

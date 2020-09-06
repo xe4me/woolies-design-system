@@ -1,0 +1,25 @@
+/*
+* Mixin to convert px to rem
+* @param {Number}
+*/
+/**
+* Mixin to manage responsive breakpoints
+* @param {String} $breakpoint - Breakpoint name
+* @require $breakpoints
+*/
+.main {
+  padding: 0 calc(var(--spacing) * 2);
+}
+@media (max-width: 375px) {
+  .main {
+    padding: 0 calc(var(--spacing));
+  }
+}
+.main__list {
+  display: block;
+  margin-top: var(--spacing);
+}
+.main__title {
+  display: block;
+  margin-top: calc(var(--spacing) * 2);
+}

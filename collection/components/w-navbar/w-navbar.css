@@ -1,0 +1,9 @@
+:host .navbar {
+  background: var(--gradient-secondary);
+  color: white;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shaddow-medium);
+  padding: 0 var(--spacing);
+}

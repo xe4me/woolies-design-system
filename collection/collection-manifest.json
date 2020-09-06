@@ -1,0 +1,17 @@
+{
+  "entries": [
+    "./components/w-typography/w-typography.js",
+    "./components/w-app/w-app.js",
+    "./components/w-box/w-box.js",
+    "./components/w-btn/w-btn.js",
+    "./components/w-navbar/w-navbar.js",
+    "./components/w-product/w-product.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.0.3",
+    "typescriptVersion": "4.0.2"
+  },
+  "collections": [],
+  "bundles": []
+}

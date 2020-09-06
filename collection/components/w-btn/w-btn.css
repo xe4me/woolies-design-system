@@ -1,0 +1,95 @@
+:host .btn {
+  background-color: unset;
+  box-shadow: none;
+  cursor: pointer;
+  color: var(--color-negative);
+  border-radius: var(--radius-small);
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  transition: var(--transition-fast) all ease-in-out;
+  /* width attribute*/
+  /* width attribute*/
+  /* size attribute varieties*/
+  /* size attribute varieties*/
+  /* variant attribute varieties*/
+  /* variant attribute varieties*/
+}
+:host .btn[data-full-width] {
+  width: 100%;
+}
+:host .btn[data-size=small] {
+  padding: calc(var(--spacing-small) / 3) calc(var(--spacing-small));
+}
+:host .btn[data-size=medium] {
+  padding: calc(var(--spacing-small) / 2) var(--spacing-small);
+  font-size: 1rem;
+}
+:host .btn[data-size=large] {
+  padding: calc(var(--spacing-small)) var(--spacing);
+  font-size: 1.1rem;
+}
+:host .btn[data-variant=text][data-color=default] {
+  color: var(--color-default);
+}
+:host .btn[data-variant=text][data-color=default]:hover {
+  color: var(--color-default-dark);
+}
+:host .btn[data-variant=text][data-color=primary] {
+  color: var(--color-primary);
+}
+:host .btn[data-variant=text][data-color=primary]:hover {
+  color: var(--color-primary-dark);
+}
+:host .btn[data-variant=text][data-color=secondary] {
+  color: var(--color-secondary);
+}
+:host .btn[data-variant=text][data-color=secondary]:hover {
+  color: var(--color-secondary-dark);
+}
+:host .btn[data-variant=contained] {
+  box-shadow: var(--shaddow-medium);
+}
+:host .btn[data-variant=contained][data-color=default] {
+  background-color: var(--color-default);
+}
+:host .btn[data-variant=contained][data-color=default]:hover {
+  background-color: var(--color-default-dark);
+}
+:host .btn[data-variant=contained][data-color=primary] {
+  background-color: var(--color-primary);
+}
+:host .btn[data-variant=contained][data-color=primary]:hover {
+  background-color: var(--color-primary-dark);
+}
+:host .btn[data-variant=contained][data-color=secondary] {
+  background-color: var(--color-secondary);
+}
+:host .btn[data-variant=contained][data-color=secondary]:hover {
+  background-color: var(--color-secondary-dark);
+}
+:host .btn[data-variant=outlined][data-color=default] {
+  border: 1px solid var(--color-default);
+  color: var(--color-default);
+}
+:host .btn[data-variant=outlined][data-color=default]:hover {
+  border-color: var(--color-default-dark);
+}
+:host .btn[data-variant=outlined][data-color=primary] {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+:host .btn[data-variant=outlined][data-color=primary]:hover {
+  border-color: var(--color-primary-dark);
+}
+:host .btn[data-variant=outlined][data-color=secondary] {
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+:host .btn[data-variant=outlined][data-color=secondary]:hover {
+  border-color: var(--color-secondary-dark);
+}
