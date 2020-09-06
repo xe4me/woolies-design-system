@@ -39,5 +39,6 @@
     "@storybook/addon-knobs": "^6.0.21",
     "@storybook/addon-notes": "^5.3.21",
     "@storybook/storybook-deployer": "^2.8.6"
-  }
+  },
+  "repository": "https://www.npmjs.com/package/wooliesx-design-system"
 }
