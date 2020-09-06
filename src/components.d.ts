@@ -19,9 +19,10 @@ export namespace Components {
         "size": 'small' | 'medium' | 'large';
         "variant": 'text' | 'contained' | 'outlined';
     }
-    interface WHeader {
+    interface WNavbar {
     }
     interface WProduct {
+        "isAddedToList": boolean;
         "product": IProduct;
     }
     interface WTypography {
@@ -47,11 +48,11 @@ declare global {
         prototype: HTMLWBtnElement;
         new (): HTMLWBtnElement;
     };
-    interface HTMLWHeaderElement extends Components.WHeader, HTMLStencilElement {
+    interface HTMLWNavbarElement extends Components.WNavbar, HTMLStencilElement {
     }
-    var HTMLWHeaderElement: {
-        prototype: HTMLWHeaderElement;
-        new (): HTMLWHeaderElement;
+    var HTMLWNavbarElement: {
+        prototype: HTMLWNavbarElement;
+        new (): HTMLWNavbarElement;
     };
     interface HTMLWProductElement extends Components.WProduct, HTMLStencilElement {
     }
@@ -69,7 +70,7 @@ declare global {
         "w-app": HTMLWAppElement;
         "w-box": HTMLWBoxElement;
         "w-btn": HTMLWBtnElement;
-        "w-header": HTMLWHeaderElement;
+        "w-navbar": HTMLWNavbarElement;
         "w-product": HTMLWProductElement;
         "w-typography": HTMLWTypographyElement;
     }
@@ -86,11 +87,13 @@ declare namespace LocalJSX {
         "size"?: 'small' | 'medium' | 'large';
         "variant"?: 'text' | 'contained' | 'outlined';
     }
-    interface WHeader {
+    interface WNavbar {
     }
     interface WProduct {
+        "isAddedToList"?: boolean;
         "onAddToCard"?: (event: CustomEvent<IProduct>) => void;
         "onAddToList"?: (event: CustomEvent<IProduct>) => void;
+        "onRemoveFromList"?: (event: CustomEvent<IProduct>) => void;
         "product"?: IProduct;
     }
     interface WTypography {
@@ -100,7 +103,7 @@ declare namespace LocalJSX {
         "w-app": WApp;
         "w-box": WBox;
         "w-btn": WBtn;
-        "w-header": WHeader;
+        "w-navbar": WNavbar;
         "w-product": WProduct;
         "w-typography": WTypography;
     }
@@ -112,7 +115,7 @@ declare module "@stencil/core" {
             "w-app": LocalJSX.WApp & JSXBase.HTMLAttributes<HTMLWAppElement>;
             "w-box": LocalJSX.WBox & JSXBase.HTMLAttributes<HTMLWBoxElement>;
             "w-btn": LocalJSX.WBtn & JSXBase.HTMLAttributes<HTMLWBtnElement>;
-            "w-header": LocalJSX.WHeader & JSXBase.HTMLAttributes<HTMLWHeaderElement>;
+            "w-navbar": LocalJSX.WNavbar & JSXBase.HTMLAttributes<HTMLWNavbarElement>;
             "w-product": LocalJSX.WProduct & JSXBase.HTMLAttributes<HTMLWProductElement>;
             "w-typography": LocalJSX.WTypography & JSXBase.HTMLAttributes<HTMLWTypographyElement>;
         }

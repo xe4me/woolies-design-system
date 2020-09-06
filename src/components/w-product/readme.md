@@ -7,17 +7,19 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type       | Default     |
-| --------- | --------- | ----------- | ---------- | ----------- |
-| `product` | --        |             | `IProduct` | `undefined` |
+| Property        | Attribute          | Description | Type       | Default     |
+| --------------- | ------------------ | ----------- | ---------- | ----------- |
+| `isAddedToList` | `is-added-to-list` |             | `boolean`  | `undefined` |
+| `product`       | --                 |             | `IProduct` | `undefined` |
 
 
 ## Events
 
-| Event       | Description | Type                    |
-| ----------- | ----------- | ----------------------- |
-| `addToCard` |             | `CustomEvent<IProduct>` |
-| `addToList` |             | `CustomEvent<IProduct>` |
+| Event            | Description | Type                    |
+| ---------------- | ----------- | ----------------------- |
+| `addToCard`      |             | `CustomEvent<IProduct>` |
+| `addToList`      |             | `CustomEvent<IProduct>` |
+| `removeFromList` |             | `CustomEvent<IProduct>` |
 
 
 ## Dependencies

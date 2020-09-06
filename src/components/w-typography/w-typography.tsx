@@ -7,6 +7,10 @@ export type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   shadow: true
 })
 export class WTypography {
+
+  /*
+  * @Prop {TypographyVariant} variant - This is how we can dynamically change the structure of the DOM
+  * */
   @Prop() variant: TypographyVariant = 'h1';
   @Element() host: HTMLDivElement;
   render() {

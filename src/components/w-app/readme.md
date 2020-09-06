@@ -9,14 +9,14 @@
 
 ### Depends on
 
-- [w-header](../w-header)
+- [w-navbar](../w-navbar)
 - [w-box](../w-box)
 - [w-product](../w-product)
 
 ### Graph
 ```mermaid
 graph TD;
-  w-app --> w-header
+  w-app --> w-navbar
   w-app --> w-box
   w-app --> w-product
   w-product --> w-box

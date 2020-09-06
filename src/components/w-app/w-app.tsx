@@ -18,7 +18,7 @@ export class WApp {
   render() {
     return (
       <div>
-        <w-header>WooliesX</w-header>
+        <w-navbar>WooliesX</w-navbar>
         <main class="main">
           <w-box>
             <w-product product={this.product}/>

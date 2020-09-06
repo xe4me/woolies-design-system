@@ -1,17 +1,15 @@
 import {Component, h} from '@stencil/core';
 
-
 @Component({
-  tag: 'w-header',
-  styleUrl: 'w-header.scss',
+  tag: 'w-navbar',
+  styleUrl: 'w-navbar.scss',
   shadow: true
 })
-export class WHeader {
-
+export class WNavbar {
   render() {
     return (
-      <header class="header">
-        <h1><slot/></h1>
+      <header class="navbar">
+        <slot/>
       </header>
     );
   }

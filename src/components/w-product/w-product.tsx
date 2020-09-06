@@ -8,15 +8,22 @@ import {IProduct} from './w-product.interface';
 })
 export class WProduct {
   @Prop() product: IProduct;
+  @Prop() isAddedToList: boolean;
 
   @Event() addToCard: EventEmitter<IProduct>;
   @Event() addToList: EventEmitter<IProduct>;
+  @Event() removeFromList: EventEmitter<IProduct>;
 
   public addToCardHandler(product: IProduct) {
     this.addToCard.emit(product);
   }
+
   public addToListHandler(product: IProduct) {
     this.addToList.emit(product);
+  }
+
+  public removeFromListHandler(product: IProduct) {
+    this.removeFromList.emit(product);
   }
 
   render() {
@@ -41,12 +48,20 @@ export class WProduct {
                        size={'large'}
                        onClick={() => this.addToCardHandler(this.product)}>ADD TO CARD
                 </w-btn>
-                <w-btn variant={'text'}
-                       color={'secondary'}
-                       size={'large'}
-                       full-width={true}
-                       onClick={() => this.addToListHandler(this.product)}>ADD TO SHOPPING LIST
-                </w-btn>
+                {this.isAddedToList && <w-btn variant={'text'}
+                                              color={'secondary'}
+                                              size={'large'}
+                                              full-width={true}
+                                              onClick={() => this.removeFromListHandler(this.product)}>
+                  REMOVE FROM SHOPPING LIST
+                </w-btn>}
+                {!this.isAddedToList && <w-btn variant={'text'}
+                                               color={'default'}
+                                               size={'large'}
+                                               full-width={true}
+                                               onClick={() => this.addToListHandler(this.product)}>
+                  ADD TO SHOPPING LIST
+                </w-btn>}
               </div>
             </div>
           </div>

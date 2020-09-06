@@ -14,8 +14,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  w-app --> w-header
-  style w-header fill:#f9f,stroke:#333,stroke-width:4px
+  w-app --> w-navbar
+  style w-navbar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
