@@ -15,6 +15,13 @@
     border: none;
     transition: var(--transition-fast) all ease-in-out;
 
+    /* width attribute*/
+    &[data-full-width] {
+      width: 100%
+    }
+
+    /* width attribute*/
+
     /* size attribute varieties*/
     &[data-size='small'] {
       padding: calc(var(--spacing-small) / 3) calc(var(--spacing-small));
@@ -60,8 +67,10 @@
 
     &[data-variant='contained'] {
       box-shadow: var(--shaddow-medium);
+
       &[data-color='default'] {
         background-color: var(--color-default);
+
         &:hover {
           background-color: var(--color-default-dark);
         }

@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { ICard } from "./components/w-card/w-card.interface";
+import { IProduct } from "./components/w-product/w-product.interface";
 import { TypographyVariant } from "./components/w-typography/w-typography";
 export namespace Components {
     interface WApp {
@@ -15,16 +15,14 @@ export namespace Components {
     }
     interface WBtn {
         "color": 'primary' | 'secondary' | 'default';
+        "fullWidth": boolean;
         "size": 'small' | 'medium' | 'large';
         "variant": 'text' | 'contained' | 'outlined';
     }
-    interface WCard {
-        "card": ICard;
-    }
-    interface WCardList {
-        "cards": ICard[];
-    }
     interface WHeader {
+    }
+    interface WProduct {
+        "product": IProduct;
     }
     interface WTypography {
         "variant": TypographyVariant;
@@ -49,23 +47,17 @@ declare global {
         prototype: HTMLWBtnElement;
         new (): HTMLWBtnElement;
     };
-    interface HTMLWCardElement extends Components.WCard, HTMLStencilElement {
-    }
-    var HTMLWCardElement: {
-        prototype: HTMLWCardElement;
-        new (): HTMLWCardElement;
-    };
-    interface HTMLWCardListElement extends Components.WCardList, HTMLStencilElement {
-    }
-    var HTMLWCardListElement: {
-        prototype: HTMLWCardListElement;
-        new (): HTMLWCardListElement;
-    };
     interface HTMLWHeaderElement extends Components.WHeader, HTMLStencilElement {
     }
     var HTMLWHeaderElement: {
         prototype: HTMLWHeaderElement;
         new (): HTMLWHeaderElement;
+    };
+    interface HTMLWProductElement extends Components.WProduct, HTMLStencilElement {
+    }
+    var HTMLWProductElement: {
+        prototype: HTMLWProductElement;
+        new (): HTMLWProductElement;
     };
     interface HTMLWTypographyElement extends Components.WTypography, HTMLStencilElement {
     }
@@ -77,9 +69,8 @@ declare global {
         "w-app": HTMLWAppElement;
         "w-box": HTMLWBoxElement;
         "w-btn": HTMLWBtnElement;
-        "w-card": HTMLWCardElement;
-        "w-card-list": HTMLWCardListElement;
         "w-header": HTMLWHeaderElement;
+        "w-product": HTMLWProductElement;
         "w-typography": HTMLWTypographyElement;
     }
 }
@@ -91,18 +82,16 @@ declare namespace LocalJSX {
     }
     interface WBtn {
         "color"?: 'primary' | 'secondary' | 'default';
+        "fullWidth"?: boolean;
         "size"?: 'small' | 'medium' | 'large';
         "variant"?: 'text' | 'contained' | 'outlined';
     }
-    interface WCard {
-        "card"?: ICard;
-        "onAddToCard"?: (event: CustomEvent<ICard>) => void;
-        "onAddToList"?: (event: CustomEvent<ICard>) => void;
-    }
-    interface WCardList {
-        "cards"?: ICard[];
-    }
     interface WHeader {
+    }
+    interface WProduct {
+        "onAddToCard"?: (event: CustomEvent<IProduct>) => void;
+        "onAddToList"?: (event: CustomEvent<IProduct>) => void;
+        "product"?: IProduct;
     }
     interface WTypography {
         "variant"?: TypographyVariant;
@@ -111,9 +100,8 @@ declare namespace LocalJSX {
         "w-app": WApp;
         "w-box": WBox;
         "w-btn": WBtn;
-        "w-card": WCard;
-        "w-card-list": WCardList;
         "w-header": WHeader;
+        "w-product": WProduct;
         "w-typography": WTypography;
     }
 }
@@ -124,9 +112,8 @@ declare module "@stencil/core" {
             "w-app": LocalJSX.WApp & JSXBase.HTMLAttributes<HTMLWAppElement>;
             "w-box": LocalJSX.WBox & JSXBase.HTMLAttributes<HTMLWBoxElement>;
             "w-btn": LocalJSX.WBtn & JSXBase.HTMLAttributes<HTMLWBtnElement>;
-            "w-card": LocalJSX.WCard & JSXBase.HTMLAttributes<HTMLWCardElement>;
-            "w-card-list": LocalJSX.WCardList & JSXBase.HTMLAttributes<HTMLWCardListElement>;
             "w-header": LocalJSX.WHeader & JSXBase.HTMLAttributes<HTMLWHeaderElement>;
+            "w-product": LocalJSX.WProduct & JSXBase.HTMLAttributes<HTMLWProductElement>;
             "w-typography": LocalJSX.WTypography & JSXBase.HTMLAttributes<HTMLWTypographyElement>;
         }
     }

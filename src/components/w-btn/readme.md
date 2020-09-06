@@ -7,23 +7,24 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                                    | Default     |
-| --------- | --------- | ----------- | --------------------------------------- | ----------- |
-| `color`   | `color`   |             | `"default" \| "primary" \| "secondary"` | `'default'` |
-| `size`    | `size`    |             | `"large" \| "medium" \| "small"`        | `'medium'`  |
-| `variant` | `variant` |             | `"contained" \| "outlined" \| "text"`   | `'text'`    |
+| Property    | Attribute    | Description | Type                                    | Default     |
+| ----------- | ------------ | ----------- | --------------------------------------- | ----------- |
+| `color`     | `color`      |             | `"default" \| "primary" \| "secondary"` | `'default'` |
+| `fullWidth` | `full-width` |             | `boolean`                               | `false`     |
+| `size`      | `size`       |             | `"large" \| "medium" \| "small"`        | `'medium'`  |
+| `variant`   | `variant`    |             | `"contained" \| "outlined" \| "text"`   | `'text'`    |
 
 
 ## Dependencies
 
 ### Used by
 
- - [w-card](../w-card)
+ - [w-product](../w-product)
 
 ### Graph
 ```mermaid
 graph TD;
-  w-card --> w-btn
+  w-product --> w-btn
   style w-btn fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

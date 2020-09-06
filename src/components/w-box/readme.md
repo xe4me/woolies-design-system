@@ -16,12 +16,14 @@
 
 ### Used by
 
- - [w-card](../w-card)
+ - [w-app](../w-app)
+ - [w-product](../w-product)
 
 ### Graph
 ```mermaid
 graph TD;
-  w-card --> w-box
+  w-app --> w-box
+  w-product --> w-box
   style w-box fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

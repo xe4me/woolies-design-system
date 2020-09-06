@@ -10,19 +10,18 @@
 ### Depends on
 
 - [w-header](../w-header)
-- [w-typography](../w-typography)
-- [w-card-list](../w-card-list)
+- [w-box](../w-box)
+- [w-product](../w-product)
 
 ### Graph
 ```mermaid
 graph TD;
   w-app --> w-header
-  w-app --> w-typography
-  w-app --> w-card-list
-  w-card-list --> w-card
-  w-card --> w-box
-  w-card --> w-typography
-  w-card --> w-btn
+  w-app --> w-box
+  w-app --> w-product
+  w-product --> w-box
+  w-product --> w-typography
+  w-product --> w-btn
   style w-app fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

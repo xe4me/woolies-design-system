@@ -14,15 +14,26 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react",
-    "jsxFactory": "h"
+    "jsxFactory": "h",
+    "baseUrl": ".",
+    "paths": {
+      "@Components": [
+        "./src/components"
+      ],
+      "@Components/*": [
+        "./src/components/*"
+      ],
+      "@Utils": [
+        "./src/utils"
+      ],
+      "@Utils/*": [
+        "./src/utils/*"
+      ]
+    }
   },
   "include": [
     "src"
   ],
-  "paths": {
-    "@Components": ["./src/components"],
-    "@Utils": ["./src/utils"]
-  },
   "exclude": [
     "./src/**/*.e2e.ts",
     "./src/**/*.spec.ts",
